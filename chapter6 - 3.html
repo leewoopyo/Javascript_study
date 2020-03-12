@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //일치연산자를 사용하는 것이 좋다.
+        var a;
+        console.log(a); //undefined
+        var b = null;
+        console.log(b); //null
+        //undefined : 정의 안됨
+        //null : 내가 정의 안한다고 설정
+        console.log(a == b);   //true
+        console.log(a === b);   //false
+        console.log(typeof a);
+        console.log(typeof b);
+
+        //동등연산자에서 true는 1, 그외엔 false
+        console.log(true == 1); //true
+        console.log(true === 1); //false
+        console.log(true == '1'); //true
+        console.log(true === '1'); //false
+        console.log(true == 2); //false
+
+        //0을 0으로 나누었을 때 --> NaN
+        console.log(0/0);
+        console.log(typeof 0/0);
+        
+        console.log(0 === -0);
+        console.log(NaN === NaN);        
+    </script>
+</body>
+</html>
