@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //정규 표현식
+        //regular expression
+        //https://opentutorials.org/course/909/5142
+
+        //컴파일
+        //패턴을 찾음
+
+        var str = 'a';
+        
+        //정규표현식 리터럴(방법 1) --> /내용/
+        //.은 어느문자든 한개
+        var pattern1 = /a/;
+        var pattern3 = /a./;
+
+        //정규표현식 객체 생성자(방법 2) --> new RegExp(내용)
+        var pattern2 = new RegExp('a');
+
+        //정규 표현식의 작업 --> 추출, test, 치환 
+        //RegExp.exec() --> 찾고자 하는 정보(a가 있는지 없는지)추출
+        document.write(pattern1.exec('abcde') + "<br>");
+        document.write(pattern3.exec('abcde') + "<br>");
+        document.write(pattern1.exec('wbcde') + "<br>");
+        
+        //RegExp.test() --> 존재 유무 확인
+        document.write(pattern1.test('abcde') + "<br>");
+        document.write(pattern3.test('abcde') + "<br>");
+        document.write(pattern1.test('wbcde') + "<br>");
+   
+
+
+
+    </script>
+</body>
+</html>

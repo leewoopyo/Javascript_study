@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //클로저
+
+        //프라이빗 에어리어(비밀공간?)
+
+        function factory_movie(title){
+            //아래 있는 함수들은 내부함수라고 볼 수 있다.
+            return {
+                get_title : function (){
+                    return title;
+                },
+                set_title : function(_title){
+                    
+                    if(typeof _title === 'string'){
+                        title = _title
+                    }else{
+                        alert('제목은 문자여야 합니다.');
+                    }
+                }
+            }
+        }
+        //각 변수는 get,set메소드를 담고 있다.
+        ghost = factory_movie('Ghost in the shell');
+        matrix = factory_movie('Matrix');
+        
+        //
+        console.log(ghost.get_title());
+        console.log(matrix.get_title());
+        
+        ghost.set_title('공각기동대');
+        
+        console.log(ghost.get_title());
+        console.log(matrix.get_title());
+    </script>
+</body>
+</html>

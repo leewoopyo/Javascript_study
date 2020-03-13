@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //값으로서의 함수와 콜백
+        //콜백
+        //어떠한 함수가 수신하는 인자가 함수인 경우 --> 콜백
+
+        //sortNumber가 콜백함수이다.
+        //콜백함수를 수신받는 sort라는 메소드가 콜백함수의 내용을 인자로 받아서 내부적으로 호출 하는 것을 통해서
+        //sort()가 동작하는 기본적인 동작방법을 정의
+        //값으로서의 함수가 가능하기 때문에 콜백함수가 가능하다.
+        function sortNumber(a,b){
+            // 위의 예제와 비교해서 a와 b의 순서를 바꾸면 정렬순서가 반대가 된다.
+            return b-a;
+        }
+        var numbers = [20, 10, 9,8,7,6,5,4,3,2,1];
+        alert(numbers.sort(sortNumber)); // array, [20,10,9,8,7,6,5,4,3,2,1]
+
+    </script>
+</body>
+</html>

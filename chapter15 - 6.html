@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //정규 표현식
+        //시각화 --> https://regexper.com/#
+        //빌더 --> https://regexr.com/
+
+        //() : 일종의 그룹
+        //\w : 문자를 의미(A~Z, a~z, 0~9)
+        //+ : 앞의 문자가 하나 이상일 경우 해당시킴 
+        //\s : 공백을 의미
+        //즉 아래의 정규식은 --> '문자 문자'
+        var pattern = /(\w+)\s(\w+)/;
+
+        var str = "coding everybody";
+
+        //캡처 : 정규식의 그룹을 가져와서 사용하는 개념(기능)
+        //$2 : 정규식에서 2번째 그룹
+        //$1 : 정규식에서 1번째 그룹
+        var result = str.replace(pattern, "$2, $1");
+        console.log(result); 
+
+    </script>
+</body>
+</html>

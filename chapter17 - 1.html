@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //값으로서의 함수와 콜백
+        //값으로서의 함수
+        
+        function a(){
+
+        }
+
+        //key : b, value : function
+        //key가 변수와 같은 역활을 함
+        //객체 안에서 변수와 같은 역활을 하는 것을 
+        //속성 --> property라고 한다.
+        //그리고 속성에 저장되어 있는 값이 함수라고 한다면,
+        //이를 메소드라고 한다.
+        var b = {
+            'b' : function(){}
+        };
+
+        //함수는 값이기 때문에 다른 함수의 인자로 전달 될 수 있다.
+        function cal(func, num){
+            return func(num)
+        }
+        function increase(num){
+            return num+1
+        }
+        function decrease(num){
+            return num-1
+        }
+        console.log(cal(increase, 1));
+        console.log(cal(decrease, 1));
+    </script>
+</body>
+</html>

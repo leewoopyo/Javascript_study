@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //유효범위(scope)
+        //왠만하면 지역변수를 써라
+
+        //1. 함수안의 변수를 찾음
+        //2. 없으면 밖에서 찾음
+        var vscope = 'global';  //전역변수
+
+        function fscope1(){
+            //var vscope = 'local';   //지역변수
+            console.log(vscope);
+        }
+        function fscope2(){
+            //var vscope = 'local';   //지역변수
+            console.log(vscope);
+        }
+        function fscope3(){
+            var vscope = 'local';   //지역변수
+            var lv ='local variables';
+            console.log(vscope);
+        }
+        fscope1();
+        fscope2();
+
+        //console.log(lv);
+
+        function fscope4(){
+            var vscope = 'local';   //지역변수
+           // vscope = 'local';   //f전역변수를 수정
+            console.log(vscope);
+        }
+        fscope4();
+        console.log(vscope);
+
+        function fscope5(){
+            var vscope = 'local';   //지역변수
+            vscope = 'local';   //지역변수를 수정
+            console.log(vscope);
+        }
+        fscope5();
+        console.log(vscope);
+    </script>
+</body>
+</html>

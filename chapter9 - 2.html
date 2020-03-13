@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수
+        //함수의 효용(코드의 재사용성 --> 유지보수 용이, 가독성)
+
+        var i = 0;
+        while(i < 10){
+            document.write(i);
+            i += 1;
+        }
+        i = 0;
+        while(i < 10){
+            document.write(i);
+            i += 1;
+        }
+        i = 0;
+        while(i < 10){
+            document.write(i);
+            i += 1;
+        }
+        i = 0;
+        while(i < 10){
+            document.write(i);
+            i += 1;
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+        //재사용성의 중요성
+        function numbering(){
+            i = 0;
+            while(i < 10){
+                document.write(i);
+                i += 1;
+            }
+        }
+        numbering();
+        numbering();
+        numbering();
+
+
+
+    </script>
+</body>
+</html>

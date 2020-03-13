@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="jQuery/jQuery.js"></script>
+    <script>
+        //클로저
+        //클로저(closure) 내부함수
+        //내부함수 외부함수
+
+        //특정 함수에서만 사용되는 함수가 있을 경우 내부함수 사용
+        function outter(){  //외부함수
+            function inner(){   //내부함수 
+                var title = 'coding everybody'; 
+                alert(title);
+            }
+            inner();    //내부함수 
+        }
+        outter();   //외부함수
+
+
+
+    </script>
+</body>
+</html>

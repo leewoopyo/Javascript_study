@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //정규 표현식
+
+        var str = 'abcdef'
+
+        var pattern = /a/;
+
+        //RegExp.match(); --> exec와 비슷 
+        document.write(str.match(pattern));
+        document.write('<br>');
+        //정규 표현식에 걸리는 내용 치환하기 
+        document.write(str.replace(pattern,"A"));
+
+    </script>
+</body>
+</html>

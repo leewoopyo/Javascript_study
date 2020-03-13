@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //유효범위(scope)
+        //정적 유효범위(lexical scoping)
+        //자바스크립트를 함수가 선언된 시점에서 유효범위를 갖는다. --> 정적 유효범위 
+        
+        var i = 5;
+ 
+        function a(){
+            var i = 10;
+            b();
+        }
+        
+        //i값으로 지역 변수가 있나 본다. 없다 --> 전역 변수인 5을 참조한다.
+        //사용될떄(i = 10)가 아닌 정의 될 때(i = 5)i 값을 참고함 
+        function b(){
+            document.write(i);
+        }
+        
+        a();
+    </script>
+</body>
+</html>

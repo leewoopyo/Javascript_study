@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //정규 표현식
+        // i, g
+        
+        //i --> 대소문자 구분 안함 
+        var xi = /a/;
+        var oi = /a/i;
+
+        console.log("Abcde".match(xi));
+        console.log("Abcde".match(oi));
+
+        //g --> 여러개 찾음
+        var xg = /a/;
+        var og = /a/g;
+
+        console.log("abcdea".match(xg));
+        console.log("abcdea".match(og));
+
+        //둘다 사용 
+        var og = /a/ig;
+        console.log("Abcdea".match(og));
+    </script>
+</body>
+</html>

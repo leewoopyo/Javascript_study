@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //함수의 호출
+        //함수.apply, 함수.call
+
+        o1 = {val1:1, val2:2, val3:3}
+        o2 = {v1:10, v2:50, v3:100, v4:25}
+        function sum(){
+            //var this = o1; 이라는 코드가 암시적으로 들어간 모양
+            var _sum = 0;
+            for(name in this){
+                _sum += this[name];
+            }
+            return _sum;
+        }
+        //o1이 sum이라는 함수의 this가 된다.
+        alert(sum.apply(o1)) // 6
+        alert(sum.apply(o2)) // 185
+
+        o1.sum = sum;
+        alert(o1.sum());
+        delete o1.sum();
+    </script>
+</body>
+</html>

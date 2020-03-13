@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //클로저
+
+        
+        function outter(){  //외부함수
+            var title = 'coding everybody';  
+            function inner(){        //내부함수
+                alert(title);
+            }
+        }
+        //이미 외부함수는 불러지고 난 후이지만, 내부함수 호출 시
+        //외부함수에서 선언된 변수를 불러올 수 있다.
+        inner = outter();
+        inner();
+    </script>
+</body>
+</html>

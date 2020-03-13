@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="jQuery/jQuery.js"></script>
+    <script>
+        //값으로서의 함수와 콜백
+        //비동기 처리(ajax : asynchronous javascript and XML)
+
+        //result는 json 파일을 읽은 인자(콜백 함수를 통해서 인자를 받은거임)
+        $.get('./data/datasource.json', 
+            function(result){
+                console.log(result);
+        },'json');
+
+    </script>
+</body>
+</html>

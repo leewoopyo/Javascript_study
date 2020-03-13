@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul>
+    <script>
+        //객체 : 연관된 데이터를 담는 그릇(배열과 유사)
+
+        //배열은 저장된 데이터들이 순서를 가지고 있다.
+        var arr = ['a','b','c'];
+        console.log(arr);
+
+        //객체의 경우 안의 데이터가 순서가 없이 key와 value만이 있다.
+       //for ~~ in
+        var grades = {'a' : 10, 'b' : 20, 'c' : 30};
+        for(var key in grades){
+            document.write("<li> key : " + key + "   value : " + grades[key] + "</li><br>")
+        }
+    
+    </script>
+    </ul>
+</body>
+</html>

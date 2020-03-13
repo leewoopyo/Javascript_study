@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //유효범위(scope)
+        //유효범위의 필요성
+
+        function a (){
+            var i = 0;     //지역변수
+            //i = 0;    //전역변수 취급되어 루한로프가 돌게 됨
+        }
+        //i는 전역 변수
+        for(var i = 0; i < 5; i++){
+            a();
+            document.write(i);
+        }
+
+    </script>
+</body>
+</html>

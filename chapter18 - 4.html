@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //클로저
+        var arr = []
+
+        //원하는 결과 0~4
+        //여기서의 결과는 55555 가 나온다.
+        var arr = []
+        for(var i = 0; i < 5; i++){
+            arr[i] = function(){
+                return i;
+            }
+        }
+        for(var index in arr) {
+            console.log(arr[index]());
+        }
+
+        //이렇게 해야한다. 
+        for(var i = 0; i < 5; i++){
+            arr[i] = function (id){
+                return function(){
+                    return id;
+                }
+            }(i);
+        }
+
+        for(var index in arr) {
+            console.log(arr[index]());
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //함수의 호출
+        //함수.apply, 함수.call
+
+        function func(){
+        }
+        func();
+
+        function sum(arg1, arg2){
+            return arg1+arg2;
+        }
+        alert(sum.apply(null, [1,2]))
+        //왜 null이 있는가?
+    </script>
+</body>
+</html>

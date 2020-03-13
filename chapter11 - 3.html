@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //객체 : 연관된 데이터를 담는 그릇(배열과 유사)
+        
+        //객체안의 또다른 객체
+        var grades = {
+            'list' : {'a1' : 10, 'a2' : 20,'a3' : 30},
+            'show' : function (){
+                //this.list.name은 안되고, this.list[name]은 된다.
+                for(var name in this.list){
+                    console.log(name, this.list[name], this.list.name);
+                }
+            },
+            'my1' : function (){
+                console.log(this.list);
+            },
+            'my2' : function (){
+                console.log(this.show);
+                this.show();
+            },
+        }
+        //객체 안의 또다른 객체 출력
+        console.log(grades['list']['a2']);
+        console.log(grades.list.a2);
+        
+        //객체 안의 함수 실행
+        grades['show']();
+
+        //this : 자신 객체를 가리킨다.
+        //my 함수를 실행하는데, grades객체에서 list를 가져오는 함수
+        grades['my1']();
+        grades['my2']();
+
+
+    
+    </script>
+</body>
+</html>

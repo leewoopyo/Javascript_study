@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체 : 연관된 데이터를 담는 그릇(배열과 유사)
+        //그러나 객체는 index부분을 내가 원하는 대로 넣을 수 있다.
+        //연관배열(associative array), 맵(map), 딕셔너리(dictionary)
+    
+        //객생 생성 방법 1
+        var grade1 = {'a' : 10, 'b' : 20, 'c' : 30};
+
+        console.log(grade1);
+
+        //객체 생성 방법 2
+        var grade2 = new Object();
+        
+        grade2['a'] = 100;
+        grade2['b'] = 200;
+        grade2['c'] = 300;
+        grade2['asdfgh'] = 400
+
+        console.log(grade2);
+        //출력하는 것은 상황에 맞게 선택
+        console.log(grade2['a']);
+        console.log(grade2.a);
+        console.log(grade2['asd' + 'fgh']);
+
+
+        
+    </script>
+</body>
+</html>
